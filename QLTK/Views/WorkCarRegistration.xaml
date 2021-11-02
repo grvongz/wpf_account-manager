@@ -1,0 +1,438 @@
+﻿<Window x:Class="QLTK.Views.WorkCarRegistration"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:QLTK.Views"
+        mc:Ignorable="d"
+        Title="WorkCarRegistration" Height="700" Width="1076"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="#181735"
+        WindowStartupLocation="CenterScreen"
+           Icon="/Logo.ico"
+        >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25"/>
+            <RowDefinition/>
+
+        </Grid.RowDefinitions>
+        <Grid Background="#0F0F2D"
+              Grid.ColumnSpan="2"
+              MouseDown="Grid_MouseDown"
+              >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="54*"/>
+                <ColumnDefinition Width="55*"/>
+                <ColumnDefinition Width="55*"/>
+                <ColumnDefinition Width="54*"/>
+                <ColumnDefinition Width="53*"/>
+                <ColumnDefinition Width="53*"/>
+                <ColumnDefinition Width="54*"/>
+                <ColumnDefinition Width="54*"/>
+                <ColumnDefinition Width="54*"/>
+                <ColumnDefinition Width="54*"/>
+                <ColumnDefinition Width="53*"/>
+                <ColumnDefinition Width="54*"/>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="106*"/>
+
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Chương trình đăng ký lịch công tác"
+                       Foreground="White"
+                       
+                       VerticalAlignment="Center"
+                     HorizontalAlignment="Center"
+                       FontFamily="Fonts/#Dosis"
+                       FontWeight="Medium" Grid.ColumnSpan="3" Margin="10,5,22,5" Width="202" Height="15"
+                       />
+            <Ellipse Fill="#FF605C" Grid.Column="13" Width="15" 
+                     
+                     HorizontalAlignment="Right" Margin="0,5,10,5" MouseLeftButtonDown="closeApp"
+                     />
+            <Ellipse Fill="#FFBD44" Grid.Column="13" Width="15" 
+                     
+                     HorizontalAlignment="Right" Margin="0,5,30,5" MouseLeftButtonDown="minimiseApp"
+                     />
+            <Ellipse Fill="#00CA4E" Grid.Column="13" Height="Auto" Width="15" 
+                     
+                     HorizontalAlignment="Right" Margin="0,5,50,5" MouseLeftButtonDown="maximiseApp"
+                     />
+        </Grid>
+        <StackPanel Grid.Row="1" 
+                    HorizontalAlignment="Center" Margin="-400,20,0,0"
+                    >
+            <TextBlock
+                Text="ĐĂNG KÝ XE CÔNG TÁC"
+                 Foreground="White"
+                 FontSize="20"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                
+                />
+        </StackPanel>
+        <StackPanel Margin="0,50,0,0"  Grid.Row="1" Orientation="Horizontal">
+            <TextBlock
+                Text="Thời gian bắt đầu"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" Margin="0,0,0,345" 
+          
+                />
+            <DatePicker x:Name="dataGo" Width="162" Margin="0,0,0,599" />
+            <TextBlock
+                Text="Thời gian kết thúc"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" Margin="80,0,0,345" 
+             
+                />
+            <DatePicker x:Name="dataEnd" Width="172" Margin="0,0,0,599"/>
+        </StackPanel>
+        <StackPanel Margin="0,90,0,0"  Grid.Row="1" Orientation="Horizontal">
+            <TextBlock
+                Text="Người chuẩn bị"
+                Foreground="White"
+                FontSize="12"
+                FontWeight="Medium" Width="86" Margin="0,-2,0,0"
+               
+                />
+
+            <ComboBox x:Name="NguoiChuanBi" IsEditable="True" Width="483" Margin="10,-2,0,565">
+                <ComboBoxItem>Doãn Văn Long</ComboBoxItem>
+                <ComboBoxItem>Trần Hồng Nhật</ComboBoxItem>
+                <ComboBoxItem>Trần Minh Nhật</ComboBoxItem>
+                <ComboBoxItem>Trương Trí Nhân</ComboBoxItem>
+            </ComboBox>
+        </StackPanel>
+
+        <StackPanel Margin="0,125,0,0" Grid.Row="1" Orientation="Horizontal">
+            <TextBlock
+                Text="Nơi đi"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis"
+                
+                />
+            <TextBox x:Name="NoiDi" Margin="48,-540,0,0" Width="150" Height="20" />
+            <TextBlock
+                Text="Nơi đến"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                 Margin="107,0,0,0"
+                />
+            <TextBox x:Name="NoiDen" Margin="45,-5,0,535" Width="153" Height="20"/>
+        </StackPanel>
+
+        <StackPanel Margin="0,155,0,0"  Grid.Row="1" Orientation="Horizontal">
+            <TextBlock x:Name="ThanhPhan"
+                Text="Thành phần"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                />
+            <TextBox Margin="15,-5,0,505" Width="501" Height="20" />
+        </StackPanel>
+
+        <StackPanel Margin="0,185,0,0"   Grid.Row="1" Orientation="Horizontal">
+            <TextBlock
+                Text="Số km"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                />
+
+            <TextBox x:Name="SoKm" Margin="47,-480,0,0" Width="150" Height="20"/>
+            <TextBlock
+                Text="Số ghế dự kiến"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                Margin="107,0,0,0"
+                />
+            <TextBox x:Name="SoGhe" Margin="10,-5,0,475"  Width="151" Height="20"/>
+        </StackPanel>
+
+        <StackPanel  Margin="0,220,0,0" Grid.Row="1" Orientation="Horizontal">
+            <TextBlock
+                Text="Nội dung"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                />
+            <TextBox x:Name="NoiDung" Margin="30,-8,0,423" Width="501" Height="40"/>
+        </StackPanel>
+
+        <StackPanel Margin="0,270,0,0" Grid.Row="1" Orientation="Horizontal">
+            <TextBlock
+                Text="Đơn vị chủ trì"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                />
+            <TextBox x:Name="DonViChuTri" Margin="7,-5,0,385" Width="502" Height="25"/>
+        </StackPanel>
+
+        <StackPanel Margin="0,320,0,0" Grid.Row="1" Orientation="Horizontal">
+            <TextBlock
+                Text="Ghi chú"
+                 Foreground="White"
+                 FontSize="12"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                />
+            <TextBox x:Name="GhiChu" Margin="40,-19,0,334" Width="503" Height="40"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="20,100,0,0">
+            <Button Content="Thêm"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                        Click="AddRegister"
+                        >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts"/>
+                        <Setter Property="Background" Value="	#f49a8d"/>
+                        <Setter Property="Cursor" Value="Hand"/>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#f8b59b"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="25"
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"
+                                                  />
+
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Content="Sửa"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                        Click="btn_Repair"
+ 
+                        >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts"/>
+                        <Setter Property="Background" Value="#39385D"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#3A3952"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="25"
+                                   
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"
+                                                  />
+
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+
+            <Button Content="Xóa"
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                        Click="DeleteRegister"
+                        >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts"/>
+                        <Setter Property="Background" Value="#ff595e"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ffb5b7"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="25"
+                                   
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"
+                                                  />
+
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Content="Tìm kiếm "
+                        Foreground="White"
+                        FontSize="14"
+                        FontWeight="Medium"
+                        Margin="0,0,10,0"
+                        Click="Search"
+ 
+                        >
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="TextElement.FontFamily" Value="Fonts"/>
+                        <Setter Property="Background" Value="#4860a8"/>
+                        <Setter Property="Cursor" Value="Hand" />
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#c0d8f0"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+
+                <Button.Template>
+                    <ControlTemplate TargetType="Button">
+                        <Border Width="100" Height="25"
+                                   
+                                    CornerRadius="12"
+                                    Background="{TemplateBinding Background}">
+                            <ContentPresenter VerticalAlignment="Center"
+                                                  HorizontalAlignment="Center"
+                                                  />
+
+
+                        </Border>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <TextBox x:Name="Type" Text="Tìm kiếm và Xóa và Sửa" >
+                <TextBox.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="Width" Value="130"/>
+                        <Setter Property="Height" Value="25"/>
+                        <Setter Property="CornerRadius" Value="12"/>
+                        
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
+
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="-80,420,0,0">
+            <TextBlock
+                 Text="BẢNG ĐĂNG KÝ XE CÔNG TÁC"
+                 Foreground="White"
+                 FontSize="20"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                Margin="94,0,0,0"
+                />
+            <DataGrid x:Name="dataListDangKyCongTac" Height="203" Margin="94,0,481,0" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Margin="600,420,0,0">
+            <TextBlock
+                 Text="MỘT SỐ NƠI ĐẾN"
+                 Foreground="White"
+                 FontSize="20"
+                 FontWeight="Medium"
+                 FontFamily="Fonts/#Dosis" 
+                Margin="1,0,0,0"
+                />
+            <DataGrid x:Name="dataListNoiDen" Height="201" Margin="0,0,10,0" />
+        </StackPanel>
+        <Grid Grid.Column="1"
+              Grid.RowSpan="2"
+              Margin="400,-365,-610,85"
+              Panel.ZIndex="-1"
+              >
+            <Grid.RenderTransform>
+                <RotateTransform Angle="50"/>
+            </Grid.RenderTransform>
+            <StackPanel Orientation="Horizontal"
+                        Margin="-120,10,-255,-240"
+                        >
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3DDDC2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"
+                        
+                     />
+                    <Border Width="700"
+                            Height="35"
+                            Background="#f49a8d"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"
+                     />
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"
+                     />
+
+                </StackPanel>
+
+                <StackPanel>
+                    <Border Width="700"
+                            Height="35"
+                            Background="#3DDDC2"
+                            Margin="150,0,0,0"
+                            CornerRadius="20"
+                     />
+                    <Border Width="700"
+                            Height="35"
+                            Background="#f49a8d"
+                            Margin="0,15,0,0"
+                            CornerRadius="20"
+                     />
+                    <Border Width="700"
+                            Height="35"
+                            Background="#383660"
+                            Margin="75,15,0,0"
+                            CornerRadius="20"
+                     />
+                </StackPanel>
+
+            </StackPanel>
+
+
+        </Grid>
+
+
+    </Grid>
+</Window>
+    
