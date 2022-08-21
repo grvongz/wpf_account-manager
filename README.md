@@ -12,7 +12,7 @@
 ## 🚀 Getting Started
 ```sh
 git clone https://github.com/82606bt/wpf_account-manager
-use Microsoft Visual Studio
+use Microsoft Visual Studio 2019
 open wpf_account-manager
 ```
 ## 📝 Features
