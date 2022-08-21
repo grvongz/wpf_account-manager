@@ -8,7 +8,7 @@
 ## Requirements
 1. Microsoft Visual Studio 2019
 2. IDE WPF
-3. Microsoft Sql Server 2014
+3. Microsoft SQL Server 2014
 ## 🚀 Getting Started
 ```sh
 git clone https://github.com/82606bt/wpf_account-manager
