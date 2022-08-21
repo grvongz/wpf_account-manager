@@ -17,4 +17,5 @@ open wpf_account-manager
 ```
 ## 📝 Features
 ![reactions](https://media.discordapp.net/attachments/933310329985859584/1010934581899317318/unknown.png?width=498&height=326)
-![reactions](https://i.pinimg.com/564x/3c/bd/49/3cbd49716717fefd3d5b070b64ba62fd.jpg)
+![reactions](https://media.discordapp.net/attachments/933310329985859584/1010934538546987009/unknown.png?width=499&height=281)
+![reactions](https://media.discordapp.net/attachments/933310329985859584/1010934569060548659/unknown.png?width=499&height=282)
